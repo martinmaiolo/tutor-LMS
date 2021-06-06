@@ -1,0 +1,14 @@
+This code will help you to change base slug `courses` to your preferred slug, replace `example-course-slug` with your own slug.
+
+
+add_filter('tutor_courses_base_slug', 'change_tutor_course_slug');
+/**
+ * @param $slug
+ * @return string
+ */
+if ( ! function_exists('change_tutor_course_slug')){
+    function change_tutor_course_slug($slug){
+        $slug = 'example-course-slug';
+        return $slug;
+    }
+}
