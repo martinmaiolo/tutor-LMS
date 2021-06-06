@@ -1,0 +1,7 @@
+function tutor_primary_author() {
+	if ( function_exists('tutor')) {
+		$tutor_post_type = tutor()->course_post_type;
+		add_post_type_support( $tutor_post_type, 'author' );
+	}
+}
+add_action('init', 'tutor_primary_author', 999 );
